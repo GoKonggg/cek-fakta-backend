@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: cek-fakta-api
+    env: python
+    buildCommand: ""
+    startCommand: "python main.py"
+    envVars:
+      - key: OPENAI_API_KEY
+        value: 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
+      - key: SERP_API_KEY
+        value: f15ac20a4fb3969424e81105797343c1da16a122003ab6b6ccb395463b9444ef
