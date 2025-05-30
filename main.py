@@ -2,11 +2,13 @@ from flask import Flask, request, jsonify
 import openai
 import requests
 
+
+import os
+
+openai.api_key = os.environ.get("OPENAI_API_KEY")
+SERP_API_KEY = os.environ.get("SERP_API_KEY")
+
 app = Flask(__name__)
-
-openai.api_key = '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'
-SERP_API_KEY = 'f15ac20a4fb3969424e81105797343c1da16a122003ab6b6ccb395463b9444ef'
-
 @app.route('/')
 def home():
     return "API Cek Fakta Online. Gunakan endpoint POST /cek-fakta"
